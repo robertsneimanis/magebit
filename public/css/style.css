@@ -1,0 +1,577 @@
+*,
+html,
+body {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.page-bg {
+    background: url(../img/subscribe-bg.jpg);
+    background-position: 680px center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.nav-container,
+.form-container,
+.thank-you-container {
+    width: 680px;
+    padding: 0 100px 119px 100px;
+}
+
+.nav-container {
+    width: 680px;
+    padding: 119px 100px 0 100px;
+}
+
+.form-container {
+    margin-top: 230px;
+}
+
+.thank-you-container {
+    margin-top: 125px;
+}
+
+.nav {
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: 1px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #6a707b;
+    margin-left: 30px;
+}
+
+.nav a:nth-child(2) {
+    margin-left: auto;
+}
+
+.nav a.logo {
+    margin-top: -19px;
+    margin-left: 0;
+}
+
+.nav a.logo img:first-child {
+    height: 40px;
+}
+
+.nav a.logo img:last-child {
+    height: 16px;
+    margin-bottom: 4px;
+    margin-left: 11px;
+}
+
+h2,
+p {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+h2 {
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 44px;
+    color: #131821;
+    margin-top: 26px;
+    margin-bottom: 16px;
+}
+
+.thank-you-container h2 {
+    margin-bottom: 22px;
+}
+
+p {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+    color: #6A707B;
+    margin-bottom: 49px;
+}
+
+/* ================================================ */
+
+.input-wrapper {
+    border-left: 4px solid #4066A5;
+    position: relative;
+    width: 663px;
+    margin-bottom: 57px;
+}
+
+input[type='text'] {
+    width: 100%;
+    border: 1px solid #E3E3E4;
+    border-left: none;
+    height: 70px;
+    padding-left: 40px;
+    padding-top: 4px;
+    font-size: 16px;
+}
+
+input[type='text']:focus {
+    outline: none;
+}
+
+.input-wrapper input[type='submit'] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url(../img/arrow.svg);
+    background-position: 19px center;
+    background-repeat: no-repeat;
+    border: 0;
+    display: block;
+    height: 100%;
+    width: 83px;
+}
+
+::-webkit-input-placeholder {
+    font-size: 16px;
+    color: #6A707B;
+}
+
+:-ms-input-placeholder {
+    font-size: 16px;
+    color: #6A707B;
+}
+
+::placeholder {
+    font-size: 16px;
+    color: #6A707B;
+}
+
+input[type='text']:focus,
+input[type='text']:hover {
+    box-shadow: 0px 30px 40px rgba(19, 24, 33, 0.06);
+}
+
+.input-wrapper input[type='submit'].validated,
+.input-wrapper input[type='submit']:hover {
+    background: url(../img/arrow-active.svg);
+    background-position: 19px center;
+    background-repeat: no-repeat;
+}
+
+.input-wrapper input[type='submit'].validated {
+    cursor: pointer;
+}
+
+.input-wrapper input[type='submit']:disabled:hover {
+    background: url(../img/arrow.svg);
+    background-position: 19px center;
+    background-repeat: no-repeat;
+}
+
+.input-wrapper input[type='submit']:focus {
+    outline: none;
+}
+
+.error-message {
+    position: absolute;
+    top: 80px;
+    left: 40px;
+}
+
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 41px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #6a707b;
+    font-size: 16px;
+    margin-left: 40px;
+    margin-right: auto;
+}
+
+.checkbox-container a {
+    color: #131821;
+}
+
+.checkbox-container a:hover {
+    color: #4066A5;
+}
+
+.checkbox-container a:focus {
+    color: #233759;
+}
+
+.checkbox-container input {
+    visibility: hidden;
+}
+
+.checkmark {
+    position: absolute;
+    top: -3px;
+    left: 0;
+    height: 26px;
+    width: 26px;
+    border-radius: 3px;
+    border: 1px solid #e3e3e4;
+}
+
+.checkbox-container input:checked~.checkmark {
+    background-color: #4066a5;
+    border-color: #4066a5;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked~.checkmark:after {
+    display: block;
+}
+
+.checkbox-container .checkmark:after {
+    left: 9px;
+    top: 4px;
+    width: 4px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.checkbox-container .terms-error {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    color: #131821;
+}
+
+.prize {
+    height: 70px;
+    margin-left: 40px;
+}
+
+/* ================================================ */
+
+.social {
+    margin-top: 20px;
+    text-align: center;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    border-top: 1px solid #E3E3E4;
+    padding-top: 49px;
+    margin-top: 54px;
+}
+
+.thank-you-container .social {
+    padding-top: 49px;
+    margin-top: 47px;
+}
+
+.social a {
+    display: inline-block;
+    width: 46px;
+    height: 46px;
+    border-radius: 24px;
+    text-align: center;
+    border: 2px solid #e3e3e4;
+    color: #b2b5ba;
+    margin-right: 16px;
+    line-height: 44px;
+}
+
+.social a.facebook-link {
+    font-size: 16px;
+}
+
+.social a.instagram-link {
+    font-size: 18px;
+}
+
+.social a.twitter-link {
+    font-size: 15px;
+}
+
+.social a.youtube-link {
+    font-size: 15px;
+    margin-right: 1px;
+}
+
+.social a.facebook-link:focus,
+.social a.instagram-link:focus,
+.social a.twitter-link:focus,
+.social a.youtube-link:focus,
+.social a.facebook-link:hover,
+.social a.instagram-link:hover,
+.social a.twitter-link:hover,
+.social a.youtube-link:hover {
+    color: #fff;
+    box-shadow: 0px 20px 40px rgba(19, 24, 33, 0.3);
+}
+
+.social a.facebook-link:hover {
+    background-color: #4267B2;
+    border-color: #4267B2;
+}
+
+.social a.facebook-link:focus {
+    background-color: #2F4A80;
+    border-color: #2F4A80;
+}
+
+.social a.instagram-link:hover {
+    background-color: #C13584;
+    border-color: #C13584;
+}
+
+.social a.instagram-link:focus {
+    background-color: #8F2762;
+    border-color: #8F2762;
+}
+
+.social a.twitter-link:hover {
+    background-color: #1DA1F2;
+    border-color: #1DA1F2;
+}
+
+.social a.twitter-link:focus {
+    background-color: #2F4A80;
+    border-color: #2F4A80;
+}
+
+.social a.youtube-link:hover {
+    background-color: #FF0000;
+    border-color: #FF0000;
+}
+
+.social a.youtube-link:focus {
+    background-color: #CC0000;
+    border-color: #CC0000;
+}
+
+@media (max-width: 1199px) {
+    .page-bg {
+        background-position: 580px center;
+    }
+
+    h2 {
+        margin-top: 100px;
+    }
+
+    .thank-you-container,
+    .form-container {
+        width: 580px;
+        padding: 0 50px 60px 50px;
+    }
+
+    .nav-container {
+        width: 580px;
+        padding: 60px 50px 0 50px;
+    }
+
+    .input-wrapper {
+        width: 613px;
+    }
+}
+
+@media (max-width: 991px) {
+    .page-bg {
+        background-position: 500px center;
+    }
+
+    h2 {
+        margin-top: 50px;
+    }
+
+    .thank-you-container,
+    .form-container {
+        width: 500px;
+        padding: 0 50px 60px 50px;
+    }
+
+    .nav-container {
+        width: 500px;
+        padding: 60px 50px 0 50px;
+    }
+
+    .input-wrapper {
+        width: 533px;
+    }
+}
+
+@media (max-width: 767px) {
+    .page-bg {
+        background-position: 0 center;
+        padding-bottom: 200px;
+    }
+
+    .nav-container {
+        background-color: #fff;
+        overflow: hidden;
+        width: 100%;
+        margin-bottom: 188px;
+        padding: 21px 40px 10px 40px;
+    }
+
+    h2 {
+        font-size: 24px;
+        line-height: 34px;
+        margin-top: 10px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 26px;
+        margin-top: -5px;
+        margin-bottom: 19px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .thank-you-container p {
+        margin-top: -12px;
+    }
+
+    .thank-you-container,
+    .form-container {
+        background-color: #fff;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 20px;
+    }
+
+    .input-wrapper {
+        width: 100%;
+    }
+
+    .prize {
+        margin-left: 0;
+        margin-top: 10px;
+        margin-bottom: 25px;
+    }
+
+    .thank-you-container .social {
+        margin-top: 39px;
+        padding-top: 19px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 575px) {
+    .nav-container {
+        padding: 21px 20px 10px 20px;
+    }
+
+    .nav a {
+        margin-left: 20px;
+        font-size: 14px;
+        line-height: 24px;
+
+    }
+
+    .nav a.logo {
+        margin-top: -11px;
+    }
+
+    .nav a.logo img:last-child {
+        display: none;
+    }
+
+    .thank-you-container,
+    .form-container {
+        width: auto;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 20px;
+    }
+
+    .checkbox-container {
+        margin-left: 0;
+    }
+
+    .input-wrapper {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    input[type='text'] {
+        height: 60px;
+        padding-left: 15px;
+    }
+
+    .input-wrapper input[type='submit'] {
+        width: 38px;
+        background-position: 0 center;
+    }
+
+    .input-wrapper input[type='submit']:hover {
+        background-position: 0 center;
+    }
+
+    .social {
+        width: 100%;
+        padding-top: 19px;
+        margin-top: 23px;
+        margin-bottom: 10px;
+    }
+
+    .social a {
+        margin-right: 5px;
+    }
+
+    .social a.youtube-link {
+        margin-right: 14px;
+    }
+}
+
+@media (max-width: 370px) {
+    .thank-you-container,
+    .form-container {
+        margin-left: 15px;
+        margin-right: 15px;
+        padding: 15px;
+    }
+
+    input[type='text'] {
+        font-size: 12px;
+        padding-left: 3px;
+        height: 45px;
+    }
+
+    ::-webkit-input-placeholder {
+        font-size: 12px;
+    }
+
+    :-ms-input-placeholder {
+        font-size: 12px;
+    }
+
+    ::placeholder {
+        font-size: 12px;
+    }
+
+    .social a {
+        width: 44px;
+        height: 44px;
+        line-height: 42px;
+    }
+
+    .social a.youtube-link {
+        margin-right: 1px;
+    }
+}

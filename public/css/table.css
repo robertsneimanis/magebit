@@ -1,0 +1,37 @@
+table.dataTable {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button,
+table.dataTable thead .sorting,
+table.dataTable thead .sorting_asc,
+table.dataTable thead .sorting_desc {
+    cursor: pointer;
+}
+
+table.dataTable tbody th,
+table.dataTable tbody td {
+    padding: 8px 10px
+}
+
+table,
+tr,
+td,
+th {
+    border: 1px solid gray;
+}
+
+.dataTables_length,
+.dataTables_filter,
+.dataTables_paginate {
+    margin: 30px 0;
+}
+
+.dataTables_info {
+    display: none;
+}
+
+.d-none {
+    display: none;
+}
