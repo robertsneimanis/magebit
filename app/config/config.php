@@ -8,6 +8,6 @@
   // App Root
   define('APPROOT', dirname(dirname(__FILE__)));
   // URL Root
-  define('URLROOT', 'http://localhost/magebit');
+  define('URLROOT', 'http://localhost/magebit-main');
   // Site Name
   define('SITENAME', 'Magebit');
